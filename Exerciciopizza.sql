@@ -11,7 +11,7 @@ insert into atendentes( idatendentes, nomeatendente, codigo) values(9,'Junior','
 -- 2
 insert into pizzas (idpizzas, sabor, preco, quantidade, quantidade_critica) values (15, 'Banana', 40, 60, 10);
 
--- 3 errada por enquanto
+-- 3 
 UPDATE pizzas SET preco = 50, quantidade_critica = 5 where idpizzas = 15;
 
 -- 4 
@@ -20,8 +20,8 @@ select * from pizzas order by preco Asc;
 -- 5
 select * from pedidos order by valor_total Desc;
 
--- 6 errada por enquanto
-delete  from pizzas where idpizzas=15;
+-- 6 
+DELETE  FROM pizzas WHERE idpizzas=15;
 
 -- 7
 select avg(preco) as media from pizzas;
@@ -39,7 +39,7 @@ SELECT DISTINCT datapedido from pedidos;
 select count(preco) from pizzas where preco > 50;
 
 -- 12
-
+select * from  pizzas where quantidade_critica = 5;
 
 -- 13
 INSERT INTO pedidos (idpedidos, idatendentes, idsocios, datapedido, valor_total) VALUES (84, 1, 3, '2024-03-19', 200);
